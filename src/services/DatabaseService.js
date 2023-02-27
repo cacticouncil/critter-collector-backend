@@ -184,7 +184,8 @@ exports.findAnimalInProfile = async (database, username, commonName, scientificN
 exports.insertNewSpawn = async (database, newSpawn) => {
     try {
         const collection = database.collection('Spawn-Points');
-
+        collection.createIndex({ 'newSpawn.coordinates': "2d" });
+        console.log("new spawn!!!")
         const returnedSpawn = await collection.insertOne(newSpawn);
 
         return returnedSpawn.ops[0];
