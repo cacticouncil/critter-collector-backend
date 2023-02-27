@@ -48,7 +48,7 @@ exports.getSwaggerSpec = () => {
                 description: 'Development server'
             },
             {
-                url: 'https://crittercollector.herokuapp.com/',
+                url: 'https://crittercollector-app.herokuapp.com/',
                 description: 'Production server'
             }
         ],
