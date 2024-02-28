@@ -9,7 +9,7 @@ exports.findNearestSpawns = async (database, maxDistInMeters, coords) => {
         //Spawn-Points collection is indexed by coordinates so we can get the nearest spawn very simply
         const nearby_spawns = await collection.find({
             coordinates: {
-                $near: {
+                "near": {
                     $geometry: {
                         type: "Point",
                         coordinates: coords // array of [long, lat]
@@ -35,7 +35,7 @@ exports.findNearbySpecialSpawns = async (database, maxDistInMeters, coords) => {
 
         const nearby_spawns = await collection.find({
             coordinates: {
-                $near: {
+                "near": {
                     $geometry: {
                         type: "Point",
                         coordinates: coords // array of [long, lat]

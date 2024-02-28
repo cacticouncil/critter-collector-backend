@@ -1,5 +1,6 @@
 {
     "PORT": 8666,
     "ANIMAL_SEARCH_RADIUS": 20000,
-    "EXCLUDED_TYPES": ["plants", "butterflies"]
+    "EXCLUDED_TYPES": ["plants", "butterflies"],
+    "DB_URI": "mongodb://critter:_what_the_critter_collector__@service.cacticouncil.org:27017/ferretdb?authMechanism=PLAIN"
 }
